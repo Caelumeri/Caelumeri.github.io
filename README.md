@@ -62,3 +62,12 @@ git push
 
 - 不想被搜索引擎收录：`<head>` 加 `<meta name="robots" content="noindex">`，只把链接发给特定的人。
 - 想加快国内访问：换国内云 OSS + 自有域名 + ICP 备案，不再是纯免费。
+
+## 首屏结构图
+
+首屏右侧是**士的宁（strychnine）**的二维骨架式，不是抽象装饰：
+
+- 结构来自 PubChem CID 441071 的 IsomericSMILES，由 RDKit 生成（脚本 `tools/make_structure.py`），分子式 C21H22N2O2。没有手绘、拼贴或生成式图像参与。
+- 它只作构图与审美示意，**不代表本人研究对象或成果**。图注写 `REFERENCE ONLY`，`aria-label` 也标了中文说明。
+- 线条与原子标签用 CSS 变量 `--mol-c` / `--mol-n` / `--mol-o` 着色，深色模式自动换色；装饰圆环由 `--line` / `--muted` 驱动。
+- 换分子：改 `tools/make_structure.py` 里的 `SMILES` 重跑，把输出替换进 `index.html` 的 `<g class="mol-structure">` 内。
