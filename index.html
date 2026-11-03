@@ -721,25 +721,23 @@ html[data-lang="en"] .contact-list a{font-size:14px}
     <div>
       <div class="eyebrow">CONTACT / SAY HELLO</div>
       <h2 id="contact-title"><span class="lang-zh">欢迎来信。</span><span class="lang-en">Get in touch.</span></h2>
-      <p><span class="lang-zh">学术合作、研究讨论请优先使用学校邮箱；日常交流可通过个人邮箱联系。此页面离线可读，但发送邮件与访问 DOI 需要相应应用或网络。</span><span class="lang-en">For academic inquiries, please use my university email. For personal correspondence, use the second address. This page works offline; external links and email sending depend on your network or email application.</span></p>
+      <p><span class="lang-zh">学术合作与研究讨论，可通过 ORCID 或学院页面联系。本页不公开邮箱地址，以免被自动收录；需要邮件联系时，请从机构页面获取。</span><span class="lang-en">For academic inquiries, please reach me through ORCID or the college page. Email addresses are intentionally not published here to avoid automated collection.</span></p>
     </div>
-    <button type="button" id="vcardBtn" class="vcard-btn"><span class="lang-zh">保存联系卡 · vCard</span><span class="lang-en">Save contact · vCard</span> ↓</button>
   </div>
   <div class="contact-list">
     <div class="contact-card">
-      <small><span class="lang-zh">学术邮箱 / ACADEMIC</span><span class="lang-en">ACADEMIC EMAIL</span></small>
-      <a href="mailto:Caobw2026@lzu.edu.cn">Caobw2026@lzu.edu.cn</a>
-      <div><button type="button" class="copy-contact" data-copy="Caobw2026@lzu.edu.cn"><span class="lang-zh">复制邮箱地址</span><span class="lang-en">Copy email</span>&nbsp; ↗</button></div>
+      <small><span class="lang-zh">学术身份 / ORCID</span><span class="lang-en">ACADEMIC ID / ORCID</span></small>
+      <a href="https://orcid.org/0009-0004-3333-7811" target="_blank" rel="me noopener noreferrer">0009-0004-3333-7811</a>
+      <div><span class="contact-source"><span class="lang-zh">论文与履历以此为准</span><span class="lang-en">Publications and record live here</span></span></div>
     </div>
     <div class="contact-card">
-      <small><span class="lang-zh">生活邮箱 / PERSONAL</span><span class="lang-en">PERSONAL EMAIL</span></small>
-      <a href="mailto:cbwshr@163.com">cbwshr@163.com</a>
-      <div><button type="button" class="copy-contact" data-copy="cbwshr@163.com"><span class="lang-zh">复制邮箱地址</span><span class="lang-en">Copy email</span>&nbsp; ↗</button></div>
+      <small><span class="lang-zh">所在机构 / INSTITUTION</span><span class="lang-en">INSTITUTION</span></small>
+      <a href="https://chem.lzu.edu.cn/" target="_blank" rel="noopener noreferrer">兰州大学化学化工学院</a>
+      <div><span class="contact-source"><span class="lang-zh">导师与联系方式见学院页面</span><span class="lang-en">Staff contacts are listed on the college page</span></span></div>
     </div>
   </div>
   <div class="contact-actions">
-    <a class="orcid-inline" href="https://orcid.org/0009-0004-3333-7811" target="_blank" rel="me noopener noreferrer">ORCID iD · 0009-0004-3333-7811 ↗</a>
-    <span class="contact-source"><span class="lang-zh">提示：发布到公网后，两个邮箱均会对访问者可见。</span><span class="lang-en">Note: both addresses become publicly visible if you publish this page online.</span></span>
+    <span class="contact-source"><span class="lang-zh">本页不公开邮箱地址。</span><span class="lang-en">Email addresses are not published on this page.</span></span>
   </div>
 </section>
 
@@ -881,32 +879,6 @@ html[data-lang="en"] .contact-list a{font-size:14px}
         notify(speak("复制失败，请选择文字手动复制","Copy unavailable; select the text manually"));
       }
     });
-  });
-
-  function escapeVCardText(value) {
-    return value.replace(/\\/g, "\\\\").replace(/\n/g, "\\n")
-                .replace(/;/g, "\\;").replace(/,/g, "\\,");
-  }
-
-  document.getElementById("vcardBtn").addEventListener("click", () => {
-    const contact = [
-      "BEGIN:VCARD", "VERSION:3.0",
-      "N:Cao;Bowen;;;",
-      "FN:" + escapeVCardText("曹博文 (Bowen Cao)"),
-      "ORG:" + escapeVCardText("兰州大学 / Lanzhou University"),
-      "TITLE:" + escapeVCardText("博士研究生 / Doctoral researcher"),
-      "EMAIL;TYPE=WORK:Caobw2026@lzu.edu.cn",
-      "EMAIL;TYPE=HOME:cbwshr@163.com",
-      "URL;TYPE=WORK:https://orcid.org/0009-0004-3333-7811",
-      "END:VCARD"
-    ].join("\r\n") + "\r\n";
-    const blob = new Blob([contact], {type:"text/vcard;charset=utf-8"});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = "Bowen_Cao.vcf";
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    notify(speak("已生成联系人文件","Contact card generated"));
   });
 
   let beforePrintHidden = [];

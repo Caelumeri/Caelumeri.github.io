@@ -6,14 +6,14 @@
 
 ## 本版改了什么
 
-1. 两个邮箱改为明文 `mailto:`（原先被 Cloudflare 混淆，file:// 下解码脚本 404，联系人显示 `[email protected]`）
+1. 删除全部邮箱与 vCard——联系区只留 ORCID 与学院页面入口（明文 `mailto:` 会被爬虫直接抓）
 2. 删除 Cloudflare `email-decode` 脚本与 `cloudflareinsights` 埋点
 3. 补 `og:` / `twitter:` meta、favicon（内联 SVG）、JSON-LD `Person`
 4. 正文内容一字未改
 
 ## 本地预览
 
-直接双击 `index.html` 即可。语言切换、暗色、vCard、复制 DOI 都可用。
+直接双击 `index.html` 即可。语言切换、暗色、筛选、复制 DOI 都可用。
 
 或起本地服务：
 
@@ -53,10 +53,10 @@ git commit -m "update: 论文列表"
 git push
 ```
 
-## 隐私提醒
+## 隐私处理
 
-- 两个邮箱都对访问者可见（页面内也写着这句）。
-- `cbwshr@163.com` 一旦上公网会被爬虫收录，介意就删掉那一张卡片。
+- 页面不公开任何邮箱地址（2026-11-03 决定）：联系方式只走 ORCID 与学院页面。
+- 以后若要加回邮箱，别用明文 `mailto:`——写成 `name [at] domain` 或走表单。
 
 ## 已知可选项
 
