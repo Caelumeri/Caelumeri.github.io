@@ -104,9 +104,9 @@
     .molecule .deco-dash{stroke-dasharray:3 7}
     .molecule .deco-arc{fill:none;stroke:var(--muted);opacity:.45}
     .molecule .deco-corner{fill:none;stroke:var(--muted);opacity:.35}
-    .ribbon{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;
-      display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;text-transform:uppercase;
-      color:var(--muted);font-size:11px;letter-spacing:.18em}
+    .ribbon{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;
+      display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:14px;
+      text-align:center;text-transform:uppercase;color:var(--muted);font-size:13px;letter-spacing:.14em}
     .ribbon b{font-weight:750;color:var(--forest)}
     section.area{padding:96px 0 20px}
     .secthead{display:grid;grid-template-columns:190px 1fr;gap:25px;align-items:start;margin-bottom:40px}
@@ -208,6 +208,8 @@
       section.area{padding-top:70px}
       .two-col,.journey,.life{grid-template-columns:1fr}
       .three-col,.skillgrid{grid-template-columns:1fr}
+      .ribbon{grid-template-columns:1fr;gap:4px}
+      .ribbon b{display:inline-block;transform:rotate(90deg)}
       .researchcard{min-height:220px}
       .researchcard h3{margin:16px 0 9px}
       .paper{grid-template-columns:40px 1fr;gap:8px 12px}
@@ -858,6 +860,15 @@ L 106.9 362.2
         <li><div class="time">2020 — 2024</div>
           <h3><span class="lang-zh">兰州大学 · 理学学士</span><span class="lang-en">Lanzhou University · BSc, Chemistry</span></h3>
           <p><span class="lang-zh">化学专业（强基计划）</span><span class="lang-en">Chemistry · Strong Foundation Program</span></p>
+        </li>
+        <li><div class="time">2017 — 2020</div>
+          <h3><span class="lang-zh">牙克石林业第一中学</span><span class="lang-en">Yakeshi Forestry No.1 High School</span></h3>
+        </li>
+        <li><div class="time">2014 — 2017</div>
+          <h3><span class="lang-zh">阿里河第一中学</span><span class="lang-en">Alihe No.1 Middle School</span></h3>
+        </li>
+        <li><div class="time">2008 — 2014</div>
+          <h3><span class="lang-zh">阿里河实验小学</span><span class="lang-en">Alihe Experimental Primary School</span></h3>
         </li>
       </ol>
     </div>
