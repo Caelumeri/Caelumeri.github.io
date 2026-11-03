@@ -95,7 +95,7 @@
       background:linear-gradient(160deg,var(--mint),var(--paper-alt));overflow:hidden;border:1px solid var(--line)}
     .heroart::before{content:"";position:absolute;width:380px;height:380px;border:1px solid var(--line);
       border-radius:50%;transform:translate(70px,-70px);opacity:.9}
-    .artlabel{position:absolute;top:28px;left:27px;font-size:10px;letter-spacing:.22em;font-weight:750;
+    .artlabel{position:absolute;top:34px;left:50%;transform:translateX(-50%);text-align:center;font-size:10px;letter-spacing:.22em;font-weight:750;
       color:var(--ink-soft);z-index:2}
     .artbottom{position:absolute;bottom:23px;left:26px;right:26px;display:flex;justify-content:space-between;
       font-size:11px;letter-spacing:.1em;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:13px}
@@ -130,7 +130,7 @@
     .cardindex{font-size:12px;color:var(--accent);letter-spacing:.12em;font-weight:750}
     .researchcard h3{font:500 23px/1.4 var(--serif);margin:27px 0 14px}
     .researchcard p{font-size:13px;line-height:1.9;color:var(--muted);margin:0 0 24px}
-    .cardfoot{font-size:11px;color:var(--ink-soft);font-weight:690;letter-spacing:.06em;margin-top:auto;
+    .cardfoot{font-size:11px;color:var(--ink-soft);font-weight:690;letter-spacing:.06em;margin-top:10px;
       border-top:1px solid var(--line);padding-top:13px}
     .note{color:var(--muted);font-size:12px;margin-top:18px}
     .paperlist{border-top:1px solid var(--line)}
@@ -292,11 +292,13 @@ body{background:var(--paper)}
 .filter-count{margin-left:auto;font-size:12px;color:var(--muted);min-width:115px;text-align:right}
 .paper2[hidden]{display:none!important}
 .heroart .artbottom{font-size:10px}
-.researchcard .side-badge{margin-top:8px;align-self:flex-start;font-size:10px;letter-spacing:.07em;
+.researchcard .side-badge{margin-top:auto;align-self:flex-start;font-size:10px;letter-spacing:.07em;
   color:var(--accent);border:1px solid var(--line);border-radius:99px;padding:3px 9px}
 .about-features{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
 .about-features span{padding:4px 10px;border:1px solid var(--line);border-radius:90px;
   color:var(--muted);font-size:11px}
+.projitem b{font-size:11px;color:var(--accent);letter-spacing:.08em;font-weight:790}
+.projitem p{font-size:12px;color:var(--muted);line-height:1.9;margin:6px 0 0}
 .evidence-note{font-size:12px;color:var(--muted);line-height:1.8;
   border-left:3px solid var(--accent);padding:7px 13px;margin-top:24px;background:var(--tint)}
 .methodstrip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);
@@ -435,7 +437,7 @@ html[data-lang="en"] .contact-list a{font-size:14px}
     </div>
   </div>
   <div class="heroart" role="img" aria-label="参考结构：士的宁（strychnine）二维骨架式，仅作构图示意，非本人研究对象">
-    <div class="artlabel">REFERENCE STRUCTURE / 01</div>
+    <div class="artlabel">REFERENCE / 01</div>
     <svg class="molecule" viewBox="0 0 460 450" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
       <circle class="deco-ring" cx="230" cy="219" r="151"/>
       <circle class="deco-ring deco-dash" cx="230" cy="219" r="111"/>
@@ -857,10 +859,6 @@ L 106.9 362.2
           <h3><span class="lang-zh">兰州大学 · 理学学士</span><span class="lang-en">Lanzhou University · BSc, Chemistry</span></h3>
           <p><span class="lang-zh">化学专业（强基计划）</span><span class="lang-en">Chemistry · Strong Foundation Program</span></p>
         </li>
-        <li><div class="time">2022 — 2023</div>
-          <h3><span class="lang-zh">光催化流式反应器项目</span><span class="lang-en">Photochemical flow reactor project</span></h3>
-          <p><span class="lang-zh">承担强基计划相关项目的方案设计与反应器搭建工作，探索光驱动甲醇转化。</span><span class="lang-en">Worked on design and construction of a photochemical flow reactor for methanol transformation in an undergraduate research project.</span></p>
-        </li>
       </ol>
     </div>
     <aside>
@@ -880,6 +878,11 @@ L 106.9 362.2
           <li><span>2024</span><span class="lang-zh">参与本科生科研指导</span><span class="lang-en">Undergraduate research mentoring</span></li>
           <li><span>2020–21</span><span class="lang-zh">化学 3 班班长</span><span class="lang-en">Class representative, Chemistry</span></li>
         </ul>
+      </div>
+          <div class="sidebox">
+        <h3><span class="lang-zh">本科阶段项目</span><span class="lang-en">Undergraduate project</span></h3>
+        <div class="projitem"><b>2022 — 2023</b>
+          <p><span class="lang-zh">光催化流式反应器项目：承担强基计划相关项目的方案设计与反应器搭建，探索光驱动甲醇转化。</span><span class="lang-en">Photochemical flow reactor: design and construction for a Strong Foundation Program project, exploring light-driven methanol transformation.</span></p></div>
       </div>
     </aside>
   </div>
