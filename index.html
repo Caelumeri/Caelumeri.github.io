@@ -176,6 +176,12 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--wine);outline-offse
 .timeline-item p{font-size:12px;line-height:1.95;color:var(--ink2);margin:0}
 .timeline-item .timeline-honor{margin-top:9px;font-size:11px;letter-spacing:.02em;color:var(--brass);display:flex;align-items:center;gap:8px}
 .timeline-item .timeline-honor:before{content:"";width:14px;height:1px;background:var(--brass);opacity:.55;flex:none}
+.honors{margin-top:40px;padding-top:26px;border-top:1px solid var(--line2);margin-left:42px}
+.honors .kicker{color:var(--brass);margin-bottom:15px}
+.honor-list{list-style:none;margin:0;padding:0}
+.honor-list li{display:flex;align-items:baseline;gap:16px;padding:9px 0;font-size:12.5px;color:var(--ink);line-height:1.7}
+.honor-list li+li{border-top:1px solid var(--line)}
+.honor-year{font-size:10px;font-weight:750;letter-spacing:.16em;color:var(--brass);flex:none;min-width:40px;font-variant-numeric:tabular-nums}
 .journey-aside{padding:31px 0 0 37px;border-left:1px solid var(--line)}
 .aside-title{font:italic 26px/1.3 var(--serif);margin:0 0 17px}
 .journey-aside>p{font-size:12px;line-height:2;color:var(--ink2);margin:0 0 20px}
@@ -1587,6 +1593,7 @@ L 224.3 176.3
         </div>
       </div>
       <div class="journey-grid">
+        <div class="journey-main">
         <div class="timeline">
           <article class="timeline-item reveal">
             <div class="timeline-date" data-i18n="date1">2026 — 至今</div>
@@ -1604,6 +1611,16 @@ L 224.3 176.3
             <h3 data-i18n="degree3">兰州大学 · 理学学士</h3>
             <p data-i18n="degree3Desc">化学专业，强基计划。2022—2023 年参与光催化流式反应器的设计与搭建，并探索光驱动甲醇转化。</p>
           </article>
+        </div>
+        <div class="honors reveal">
+          <div class="kicker" data-i18n="honorsKicker">HONORS / 历次获奖</div>
+          <ul class="honor-list">
+            <li><span class="honor-year">2025</span><span data-i18n="honor2025">研究生三等奖学金</span></li>
+            <li><span class="honor-year">2024</span><span data-i18n="honor2024">研究生一等奖学金</span></li>
+            <li><span class="honor-year">2023</span><span data-i18n="honor2023">研究生一等奖学金</span></li>
+            <li><span class="honor-year">2021</span><span data-i18n="honor2021">优秀团干部</span></li>
+          </ul>
+        </div>
         </div>
         <aside class="journey-aside research-practice reveal">
           <div class="kicker">RESEARCH PRACTICE / 研究实践</div>
@@ -1737,6 +1754,11 @@ L 224.3 176.3
     "degree1": "兰州大学 · 博士研究生",
     "degree1Desc": "化学化工学院 · 天然产物化学全国重点实验室 · 有机化学方向",
     "degree1Honor": "2026 年博士研究生学业二等奖学金",
+    "honorsKicker": "HONORS / 历次获奖",
+    "honor2025": "研究生三等奖学金",
+    "honor2024": "研究生一等奖学金",
+    "honor2023": "研究生一等奖学金",
+    "honor2021": "优秀团干部",
     "degree2": "兰州大学 · 硕士研究生",
     "degree2Desc": "化学专业；参与有机转化、功能高分子及其生物效应相关研究。",
     "degree3": "兰州大学 · 理学学士",
@@ -1816,6 +1838,11 @@ L 224.3 176.3
     "degree1": "Lanzhou University · PhD researcher",
     "degree1Desc": "College of Chemistry and Chemical Engineering · State Key Laboratory of Natural Product Chemistry · Organic Chemistry",
     "degree1Honor": "2026 Doctoral Academic Scholarship (Second Class)",
+    "honorsKicker": "HONORS / SELECTED AWARDS",
+    "honor2025": "Graduate Scholarship (Third Class)",
+    "honor2024": "Graduate Scholarship (First Class)",
+    "honor2023": "Graduate Scholarship (First Class)",
+    "honor2021": "Outstanding Youth League Cadre",
     "degree2": "Lanzhou University · Master's study",
     "degree2Desc": "Chemistry, with research involving organic transformations, functional polymers, and associated biological effects.",
     "degree3": "Lanzhou University · BSc in Chemistry",
