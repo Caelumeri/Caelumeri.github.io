@@ -68,3 +68,5 @@ git push
 **`.nojekyll` 是必需品**：GitHub Pages 默认用 Jekyll 构建，会把 `.md` 编译成 `.html`，导致 `/research.md` 404。加了空文件 `.nojekyll` 后，`.md` 原样输出，Content-Type 为 `text/markdown`。
 
 `taste.md` 只保留判断标准；肤况、体型、预算、室友、购物清单一律不进公开版。`philosophy.md` 只留概念，45 轮原始对话与情绪记录不外流。
+
+**入口**：首页页脚有「给 AI 的公开资料 →」一行指向 `llms.txt`；`<head>` 里另有 `<link rel="alternate" type="text/plain" href="/llms.txt">`，供能解析该标签的工具发现。
